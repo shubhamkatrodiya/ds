@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>slider</title>
+	<style type="text/css">
+		.prev
+		{
+			border-radius: 50%;
+			padding: 10px;
+			border: 2px red ;
+		}
+	</style>
+	<script type="text/javascript">
+		var img , t = 0;
+		function slider() 
+		{
+				img = document.getElementsByClassName('img');
+
+				for (var i = 0; i < img.length; i++) 
+				{
+					img[i].style.display = "none";
+				}
+				img[t].style.display = "block";
+		}
+		function prev()
+		{
+			if(t <= 0)
+			{
+				t=img.length;
+			}
+			t--;
+			slider();
+		}
+		function next()
+		{
+			t++;
+			if(t >= img.length)
+			{
+				t=0;
+			}
+			slider();
+		}
+		window.onload=function()
+		{
+			slider();
+		}
+	</script>
+</head>
+<body>
+
+	<img src="image/1.jpg" width="100%" height="550px" class="img">
+	<img src="image/2.jpg" width="100%" height="550px" class="img">
+	<img src="image/3.jpg" width="100%" height="550px" class="img">
+	<img src="image/4.jpg" width="100%" height="550px" class="img">
+	<img src="image/5.jpg" width="100%" height="550px" class="img">
+
+</body>
+</html>

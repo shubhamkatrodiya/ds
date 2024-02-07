@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script type="text/javascript">
+		
+		function getval()
+		{
+			// document.getElementById('one').innerHTML = "Hello"
+			// document.getElementById('one').style.color = "red"
+
+			var x = document.getElementsByClassName('one');
+			for (var i = 0; i < x.length; i++) 
+			{
+				x[i].innerHTML = "Hello Welcome......!";
+				x[i].style.color = "red";
+				x[i].style.backgroundColor = "skyblue";
+			}
+
+			document.getElementsByIdClassName('one');
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<h1 class ="one">Hello</h1>
+	<h1 class ="one">Hello</h1>
+	<h1 class ="one">Hello</h1>
+	<h1 class ="one">Hello</h1>
+	<h1 class ="one">Hello</h1>
+	<input type="button" onclick="getval()" value="click" name="">
+
+</body>
+</html>

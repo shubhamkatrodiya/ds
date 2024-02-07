@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script type="text/javascript">
+		
+		class first
+		{
+			one()
+			{
+				document.write('one ');
+			}
+			two()
+			{
+				document.write('two ');
+			}
+		}
+		class second extends first
+		{
+			data()
+			{
+				document.write('call data');
+			}
+		}
+
+		var s =new second();
+
+		s.one();
+		s.two();
+		s.data();
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

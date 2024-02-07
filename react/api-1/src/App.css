@@ -1,0 +1,153 @@
+.api-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #272B33;
+    padding: 100px 0;
+}
+
+.box {
+    display: flex;
+    background-color: hsl(225deg 6.25% 25.1%);
+    width: calc(50% - 10px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.box .image {
+    width: 33%;
+    box-sizing: border-box;
+}
+
+.box .image img {
+    display: block;
+}
+
+.box .detail {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+.line1 {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.margin {
+    margin: 0 5px;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.light {
+    color: rgb(158, 158, 158);
+}
+
+.circal {
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.parent {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #272B33;
+}
+
+.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+}
+
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+.loader:before {
+    animation: ball1 1s infinite;
+    background-color: #fff;
+    box-shadow: 30px 0 0 #ff3d00;
+    margin-bottom: 10px;
+}
+
+.loader:after {
+    animation: ball2 1s infinite;
+    background-color: #ff3d00;
+    box-shadow: 30px 0 0 #fff;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(0.8)
+    }
+
+    50% {
+        transform: rotate(360deg) scale(1.2)
+    }
+
+    100% {
+        transform: rotate(720deg) scale(0.8)
+    }
+}
+
+@keyframes ball1 {
+    0% {
+        box-shadow: 30px 0 0 #ff3d00;
+    }
+
+    50% {
+        box-shadow: 0 0 0 #ff3d00;
+        margin-bottom: 0;
+        transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 #ff3d00;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        box-shadow: 30px 0 0 #fff;
+    }
+
+    50% {
+        box-shadow: 0 0 0 #fff;
+        margin-top: -20px;
+        transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 #fff;
+        margin-top: 0;
+    }
+}

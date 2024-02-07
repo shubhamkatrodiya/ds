@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script type="text/javascript">
+		
+		function validdata() 
+		{
+			var name=document.getElementById('name').value;
+			var email =document.getElementById('email').value;
+			var contact =document.getElementById('contact').value;
+			var gender = document.getElementsByClassName('gender');
+			var hobby = document.getElementsByClassName('hobby');
+			var city=document.getElementById('city').value;
+			var address=document.getElementById('address').value;
+
+
+			if(name=='') 
+			{
+				alert("Enter name");
+				return false;
+			}
+			if(email=='') 
+			{
+				alert("Enter email");
+				return false;
+			}
+			if(contact=='') 
+			{
+				alert("Enter contact");
+				return false;
+			}
+			
+			if (gender[0].checked == false && gender[1].checked == false) 
+			{
+				alert("Select gender");
+				return false;	
+			}
+			if (hobby[0].checked == false && hobby[1].checked == false && hobby[2].checked == false ) 
+			{
+				alert("Select hobby");
+				return false;
+			}
+			if (city=='') 
+			{
+				alert("Select City");
+				return false;
+			}
+			if (address=='') 
+			{
+				alert('Enter address');
+				return false;
+			}
+
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<form onsubmit="return validdata()">
+		<table border="2">
+			<tr>
+				<td>Name :</td>
+				<td><input type="text" id="name"></td>
+			</tr>
+			<tr>
+				<td>Email :</td>
+				<td><input type="email" id="email"></td>
+			</tr>
+			<tr>
+				<td>Contact :</td>
+				<td width="100
+				"><input type="text" id="contact" name=""></td>
+			</tr>
+			<tr>
+				<td>Gender :</td>
+				<td><input type="radio" class="gender" id="gender" name="gender">Male<input type="radio" class="gender" id="check" name="gender">Female</td>
+			</tr>
+			<tr>
+				<td>Hobby :</td>
+				<td>
+					<input type="checkbox" class="hobby" name="">Reading
+					<input type="checkbox" class="hobby" name="">Watching
+					<input type="checkbox" class="hobby" name="">Dancing
+				</td>
+			</tr>
+			<tr>
+				<td>City :</td>
+				<td>
+					<select id="city">
+						<option value="">select city</option>
+						<option value="surat">Surat</option>
+						<option value="mumbai">Mumbai</option>
+						<option value="vapi">Vapi</option>
+						<option value="navsari">Navsari</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Address :</td>
+				<td>
+					<textarea id="address"></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="submit" name="">
+				</td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>

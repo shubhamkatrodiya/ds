@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>puzzle</title>
+
+	<style type="text/css">
+		.box input
+		{
+			width: 70px;
+			height: 70px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		
+		function change1() 
+		{
+			change()
+			if(n1==" ")
+			{
+				document.getElementById('2').value=n1;
+				document.getElementById('1').value=" ";
+			}
+			else
+			{
+				document.getElementById('5').value=n1;
+				document.getElementById('1').value=" ";
+			}
+		}
+		function change2()
+		{
+			change()
+			if(n1==" ")
+			{
+				document.getElementById('1').value=n2;
+				document.getElementById('2').value=" ";
+			}
+			else if(n3=="")
+			{
+				document.getElementById('3').value=n2;
+				document.getElementById('2').value=" ";
+			}
+			else
+			{
+				document.getElementById('5').value=n2;
+				document.getElementById('2').value=" ";
+			}
+		}
+		function change3()
+		{
+			change()
+			if(n2 == " ")
+			{
+				document.getElementById('2').value=n3;
+				document.getElementById('3').value=" ";
+			}
+			else
+			{
+				document.getElementById('6').value=n3;
+				document.getElementById('3').value=" ";
+			}
+		}
+		function change4()
+		{
+			change()
+			if(n1==" ")
+			{
+				document.getElementById('1').value=n4;
+				document.getElementById('4').value=" ";
+			}
+			else if(n5=="")
+			{
+				document.getElementById('5').value=n4;
+				document.getElementById('4').value=" ";
+			}
+			else
+			{
+				document.getElementById('7').value=n4;
+				document.getElementById('4').value=" ";
+			}
+		}
+		function change5()
+		{
+			change()
+			if(n2 == " ")
+			{
+				document.getElementById('7').value=n4;
+				document.getElementById('4').value=" ";	
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<input type="button" value="1" onclick="change1()" name="" id="1">
+		<input type="button" value="3" onclick="change2()" name="" id="2">
+		<input type="button" value="2" onclick="change3()" name="" id="3"><br>
+		<input type="button" value=" " onclick="change4()" name="" id="4">
+		<input type="button" value="4" onclick="change5()" name="" id="5">
+		<input type="button" value="6" onclick="change6()" name="" id="6"><br>
+		<input type="button" value="7" onclick="change7()" name="" id="7">
+		<input type="button" value="5" onclick="change8()" name="" id="8">
+		<input type="button" value="3" onclick="change9()" name="" id="9">
+	</div>
+
+</body>
+</html>
